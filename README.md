@@ -13,4 +13,4 @@ Understand how to diagnose and repair issues using Active Directory logs, CMD co
 
 In this home lab, we will explore common Active Directory issues users might encounter, then use CMD commands to resolve PC offline problems.
 
-Let's begin with some CMD commands. On the local user account Bob, open Command Prompt and type ping 12.1.10.2. This is the IP address of our Windows Server 2022 machine. This command will confirm that Desktop2 can communicate with the server. Now, let's repeat the process on the Server by pinging Desktop2 to verify the connection from the server side.
+Let's begin with some CMD commands. On the local user account Bob, open Command Prompt and type ping 192.168.1.102. This is the IP address of our Windows Server 2022 machine. This command will confirm that Desktop2 can communicate with the server. Now, let's repeat the process on the Server by pinging Desktop2 to verify the connection from the server side.
