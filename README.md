@@ -1,4 +1,4 @@
-#Overview: Lab 6 Common Active Directory Issues, CMD Commands, PC Offline
+# Overview: Lab 6 Common Active Directory Issues, CMD Commands, PC Offline
 
 This section of my home lab documentation explores common Active Directory issues, troubleshooting with CMD commands, and resolving situations where a PC is offline in a domain environment. The project provides practical solutions for addressing common problems that administrators face when working with Active Directory, such as authentication failures, group policy application issues, and troubleshooting offline PCs.
 
