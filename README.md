@@ -155,5 +155,111 @@ Let's begin with some CMD commands. On the local user account Bob, open Command 
 18. <br>  ![image](https://github.com/user-attachments/assets/a9ea3485-a1d9-4253-adf0-402950813c8c)
 
 <br> 
-19. 
+19. <br> ![image](https://github.com/user-attachments/assets/46a02350-649c-4c24-a08d-224c372abe10)
 
+<br.
+
+20. Now, let’s create a scenario where Bob’s account is expired due to inactivity or because an administrator has set an expiration date for the account. To do this:
+
+1. Select Bob in Active Directory Users and Computers.
+
+2. Click on the Account tab.
+
+3. Under Account expires, select End of and choose a date that has already passed.
+
+4. Clicl Aplly and Ok
+
+<br>
+
+![image](https://github.com/user-attachments/assets/2b7726be-4df5-4482-ae9d-a4ed7c5454c4)
+
+<br>
+
+21. <br> ![image](https://github.com/user-attachments/assets/a542f486-a303-4eb6-befb-649049071aa9)
+<br>
+
+22. To resolve this, the Helpdesk account would need to go to Active Directory Users and Computers → search for Bob using the Find function in the domain → select Entire Directory → open Bob’s account → go to the Account tab, then select Never under Account expires.
+
+<br>
+
+![image](https://github.com/user-attachments/assets/f51fd2ae-51cc-4be5-9a22-335ddb9f7ceb)
+
+<br>
+
+23. To make sure Bob’s account is valid, open Command Prompt on the Helpdesk account and type net user Bob /domain. This will verify that the account is active and should allow Bob to log in.
+
+<br> 
+
+![Screenshot 2025-02-28 at 4 15 49 PM](https://github.com/user-attachments/assets/25a011ca-4234-4a83-9488-c4a27fb75248)
+
+<br> 
+
+24. Let’s create an issue where the computer has fallen off the domain. On the Helpdesk account in Active Directory Users and Computers → select Computers → right-click on the computer and select Disable Account.
+
+<br> 
+
+![Screenshot 2025-02-28 at 4 17 06 PM](https://github.com/user-attachments/assets/49e20e5d-7d7b-49e6-bff3-c592cbe9214c)
+
+<br> 
+
+25. Lets use our Helpdesk account to login into desktop2. It should give us an error.
+
+<br> 
+
+![image](https://github.com/user-attachments/assets/63baf502-505a-4651-a442-9893233526f8)
+
+<br> 
+
+
+26. When a computer is fallen off from a domain, we can sometimes fix it by going to Active Directory Users and Computers and selecting that computer (Desktop2) and enabling it. We can log in back into our accounts now.
+
+<br> 
+
+![Screenshot 2025-02-28 at 4 17 44 PM](https://github.com/user-attachments/assets/c2ec4806-4524-4942-89db-2c42daa3b0c7)
+
+<br> 
+
+27. Now let’s try a different way of making the computer fall off the domain. We will delete Desktop2 from the domain. In Active Directory Users and Computers on the Helpdesk account, select Computers, then right-click and delete Desktop2.
+
+Next, let’s create a new user: go to Users, right-click, and select New → User. Use First/Last Name and set the User logon as Test, then click Finish.
+
+Now, attempt to log in to Desktop2 using the Test account. An error should appear indicating that the computer is no longer part of the domain.
+
+
+<br>
+
+![image](https://github.com/user-attachments/assets/bebbd0a7-3ba0-4e41-bf16-7f78f844e1bd)
+
+<br> 
+
+28. To add Desktop2 back into our Computers domain, we need to log into our domain as administrator to do that type “.\administrator” and enter your password.
+
+<br>
+
+![image](https://github.com/user-attachments/assets/2c0348fc-154a-44ca-8f75-9f15059d2657)
+
+<br> 
+
+29. Next, go into File Explorer → right-click on This PC → select Properties → click on Rename this PC (Advanced) → select Change → under Member of, change it to Workgroup. Then, restart the computer.
+
+<br> 
+
+![Screenshot 2025-02-28 at 4 54 36 PM](https://github.com/user-attachments/assets/3f153652-c586-480e-88f9-378dce7cd334)
+
+<br> 
+
+30. Log in as Administrator and repeat the process to add the computer back to the domain. Go to File Explorer → right-click on This PC → select Properties → click on Rename this PC (Advanced) → select Change, then add it back to the domain as SimoTech.com. Proceed with a restart.
+
+Now, go back to the Helpdesk account in Active Directory Users and Computers, and under Computers, you should see Desktop2 is back in the domain.
+
+<br>
+
+![Screenshot 2025-02-28 at 5 13 26 PM](https://github.com/user-attachments/assets/62298963-bb51-4dc6-b2cb-00815a750882)
+
+<br> 
+
+Congratulations! We have successfully addressed several common Active Directory issues, utilized CMD commands effectively, and resolved PC offline scenarios.
+
+<br>
+
+👉 [Next Lab 7 : Security Groups, Mapped Drives, Personal Drives](https://github.com/tobifash0/Security-Groups-Mapped-Drives-Personal-Drives)
